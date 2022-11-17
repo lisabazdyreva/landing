@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <title>Air</title>
 </head>
-<!--visually-hidden-->
+
 <body class="page-inner">
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img src="" alt="Air - booking jets" width="100" height="100"/>
+      <img width="139" height="37" src="" alt="Air - booking jets"/>
     </a>
     <nav class="main-nav">
       <ul class="main-nav__menu">
-        <li class="main-nav__item">Home</li>
-        <li class="main-nav__item">Booking</li>
-        <li class="main-nav__item">Private Jet</li>
-        <li class="main-nav__item">Specification</li>
-        <li class="main-nav__item">Luxury Charters</li>
-        <li class="main-nav__item">Membership</li>
+        <li class="main-nav__item"><a href="#">Home</a></li>
+        <li class="main-nav__item"><a href="#">Booking</a></li>
+        <li class="main-nav__item"><a href="#">Private Jet</a></li>
+        <li class="main-nav__item"><a href="#">Specification</a></li>
+        <li class="main-nav__item"><a href="#">Luxury Charters</a></li>
+        <li class="main-nav__item"><a href="#">Membership</a></li>
       </ul>
     </nav>
     <ul class="user-nav">
@@ -33,41 +33,64 @@
     <h1 class="visually-hidden">Booking Private jet</h1>
 
     <section class="intro">
-      <h2 class="intro__title">Enjoy <span>reserved</span><br/>overhead bin space</h2>
+      <h3 class="intro__title">Enjoy <span>reserved</span><br/>overhead bin space</h3>
       <p class="intro__link">Explore now</p>
     </section>
 
     <section class="booking">
+      <h2 class="visually-hidden">Check flights</h2>
       <form class="book-form" action="submit" method="post">
-        <select name="trip" id="trip">
-          <option value="round">Round Trip</option>
-          <option value="one">One way Trip</option>
-        </select>
 
-        <select name="type">
-          <option>Flight Type</option>
-        </select>
+        <fieldset class="book-form__item">
 
-        <select name="person">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-        <input type="search" placeholder="from" />
-        <button type="button">Reverse</button>
-        <input type="search" placeholder="to" />
+          <label for="trip">Choose one or two-way trip:</label>
+          <select name="trip" id="trip">
+            <option value="round">Round Trip</option>
+            <option value="one">One way Trip</option>
+          </select>
 
-        <input />
+          <label for="flight-type">Choose flight type:</label>
+          <select id="flight-type" name="type">
+            <option value="business">Business</option>
+            <option value="leisure">Leisure</option>
+          </select>
+
+          <label for="people-amount">Number of persons:</label>
+          <select id="people-amount" name="person">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="book-form__item">
+          <label for="departure-airport">Departure airport</label>
+          <input type="search" id="departure-airport" placeholder="from" />
+
+          <button type="button">Reverse</button>
+
+          <label for="arrival-airport">Arrival airport</label>
+          <input type="search" id="arrival-airport" placeholder="to" />
+        </fieldset>
+
+        <fieldset class="book-form__item">
+          <label for="date-departure">Departure date</label>
+          <input type="date" id="date-departure" name="date-departure"/>
+
+          <label for="date-arrival">Arrival date</label>
+          <input type="date" id="date-arrival" name="date-arrival" />
+        </fieldset>
 
         <button type="submit">Book Flights</button>
       </form>
     </section>
 
     <section class="descriptions">
-      <h2 class="descriptions__title">Private Jet for Business & Leisure Purposes</h2>
+      <h2 class="visually-hidden">Descriptions of jet's type</h2>
+      <p class="descriptions__title">Private Jet for Business & Leisure Purposes</p>
 
       <article class="description-item">
-        <img class="description-item__img" src="" alt="" />
+        <img width="589" height="392" class="description-item__img" src="" alt="" />
         <h3 class="description-item__title">Private Jet Charter</h3>
         <p class="description-item__text">
           It is a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -77,7 +100,7 @@
       </article>
 
       <article class="description-item">
-        <img class="description-item__img" src="" alt="" />
+        <img width="589" height="392" class="description-item__img" src="" alt="" />
         <h3 class="description-item__title">Business Jet Charter</h3>
         <p class="description-item__text">
           It is a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -92,48 +115,108 @@
       <div class="features-wrapper">
 
         <div class="feature-item">
-          <img class="feature-item__img"/>
-          <h4 class="feature-item__title">Luxury And Comfort</h4>
-          <p class="feature-item__description">It is a long established fact that a reader will be distracted by the readable</p>
+          <img class="feature-item__img" alt="" src="/"/>
+          <h3 class="feature-item__title">Luxury And Comfort</h3>
+          <p class="feature-item__description">It is a long-established fact that a reader will be distracted by the readable</p>
         </div>
 
         <div class="feature-item">
-          <img class="feature-item__img"/>
-          <h4 class="feature-item__title">Luxury And Comfort</h4>
-          <p class="feature-item__description">It is a long established fact that a reader will be distracted by the readable</p>
+          <img class="feature-item__img" alt="" src="/"/>
+          <h3 class="feature-item__title">Safety and security</h3>
+          <p class="feature-item__description">It is a long-established fact that a reader will be distracted by the readable</p>
         </div>
 
         <div class="feature-item">
-          <img class="feature-item__img"/>
-          <h4 class="feature-item__title">Luxury And Comfort</h4>
-          <p class="feature-item__description">It is a long established fact that a reader will be distracted by the readable</p>
+          <img class="feature-item__img" alt="" src="/"/>
+          <h3 class="feature-item__title">Personal schedule & booking</h3>
+          <p class="feature-item__description">It is a long-established fact that a reader will be distracted by the readable</p>
         </div>
 
         <div class="feature-item">
-          <img class="feature-item__img"/>
-          <h4 class="feature-item__title">Luxury And Comfort</h4>
-          <p class="feature-item__description">It is a long established fact that a reader will be distracted by the readable</p>
+          <img class="feature-item__img" alt="" src="/"/>
+          <h3 class="feature-item__title">Experienced crew</h3>
+          <p class="feature-item__description">It is a long-established fact that a reader will be distracted by the readable</p>
         </div>
       </div>
     </section>
 
     <section class="gallery">
-      <h2 class="gallery__title">Luxury Charters</h2>
-      <div>
-        <img />
+      <h2 class="visually-hidden">Photo gallery of luxury jets</h2>
+      <p class="gallery__title">Luxury Charters</p>
+
+      <div class="gallery__items">
+        <figure class="gallery__item">
+          <img alt="" width="230" height="189" src="/"/>
+          <figcaption>Piaggio P.180 Avanti</figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <img alt="" width="230" height="189" src="/"/>
+          <figcaption>Pilatus PC-12</figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <img alt="" width="230" height="189" src="/"/>
+          <figcaption>piper pa27 aztec</figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <img alt="" width="230" height="189" src="/"/>
+          <figcaption>Beech BE100 King Air</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section>
-      <h2>Enjoy our membership</h2>
+    <section class="tariffs">
+      <h2 class="visually-hidden">Tariff's descriptions and prices</h2>
+      <p class="tariffs__title">Enjoy our membership</p>
 
-      <div>
+      <div class="tariff">
+        <h3 class="tariff__title">Popular</h3>
+        <p class="tariff__subtitle">What You’ll Get</p>
+
+        <ul class="tariff__options">
+          <li class="tariff__options-item">One-time initiation fee $0</li>
+          <li class="tariff__options-item">Deposit $50k</li>
+          <li class="tariff__options-item">Pricing / rates  Dynamic</li>
+          <li class="tariff__options-item">Priority fleet access No</li>
+          <li class="tariff__options-item">Guaranteed fleet access No</li>
+        </ul>
+
+        <h3 class="tariff__title">$250/<span>month</span></h3>
+        <button type="button" class="btn">Choose</button>
       </div>
 
-      <div>
+      <div class="tariff">
+        <h3 class="tariff__title">Business</h3>
+        <p class="tariff__subtitle">What You’ll Get</p>
+
+        <ul class="tariff__options">
+          <li class="tariff__options-item">One-time initiation fee $0</li>
+          <li class="tariff__options-item">Deposit $50k</li>
+          <li class="tariff__options-item">Pricing / rates  Dynamic</li>
+          <li class="tariff__options-item">Priority fleet access Yes</li>
+          <li class="tariff__options-item">Guaranteed fleet access No</li>
+        </ul>
+
+        <h3 class="tariff__title">$480/<span>month</span></h3>
+        <button type="button" class="btn">Choose</button>
       </div>
 
-      <div>
+      <div class="tariff">
+        <h3 class="tariff__title">Business</h3>
+        <p class="tariff__subtitle">What You’ll Get</p>
+
+        <ul class="tariff__options">
+          <li class="tariff__options-item">One-time initiation fee $0</li>
+          <li class="tariff__options-item">Deposit $50k</li>
+          <li class="tariff__options-item">Pricing / rates  Dynamic</li>
+          <li class="tariff__options-item">Priority fleet access Yes</li>
+          <li class="tariff__options-item">Guaranteed fleet access Yes</li>
+        </ul>
+
+        <h3 class="tariff__title">$680/<span>month</span></h3>
+        <button type="button" class="btn">Choose</button>
       </div>
     </section>
 
